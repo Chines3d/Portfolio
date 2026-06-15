@@ -141,8 +141,6 @@ section {
 }
 
 .hero-visual .img-val {
-    aspect-ratio: 16/9;
-    object-fit: cover;
     width: 300px;  /* Définis la largeur souhaitée */
     height: 300px; /* Définis la hauteur souhaitée */
     object-fit: cover; /* Recadre l'image pour remplir le carré */
