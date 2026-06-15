@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Nicolas Jacquemin</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-logo">NJ // AGENT</div>
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#interets">Intérêts</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="accueil" class="hero">
+        <div class="split-layout">
+            <div class="hero-content">
+                <p class="tagline">SÉLECTION D'AGENT</p>
+                <h1>Nicolas <span>Jacquemin</span></h1>
+                <h2>Recherche d'alternance - I sem/2 Cybersécurité</h2>
+                <p>Étudiant en 1ère année de BUT Réseaux & Télécoms à Sophia Antipolis. Mon objectif : comprendre et verrouiller les infrastructures de demain.</p>
+                <div class="cta-container">
+                    <a href="#projets" class="btn-val">Déployer les opérations</a>
+                    <a href="Cv.pdf" class="btn-val btn-sec" target="_blank">Extraire le CV</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <img src="Chien.png" alt="Agent Nicolas Jacquemin" class="img-val">
+            </div>
+        </div>
+    </section>
+
+    <section id="apropos">
+        <h2 class="section-title">Dossier Personnel (À propos)</h2>
+        <div class="split-layout">
+            <div class="content-box">
+                <p>Mon intérêt pour l'informatique vient d'un détail simple : je voulais que mes jeux tournent parfaitement. À force d'optimiser mon matériel et ma connexion pour réduire ma latence sur Valorant, j'ai eu envie de comprendre comment les données voyageaient réellement. C'est ce qui m'a poussé à faire un BUT R&T à Sophia Antipolis.</p>
+                <p>Je suis du genre à tester les choses par moi-même, que ce soit pour configurer un clavier magnétique ou apprendre la guitare dans mon coin. En dehors des écrans, je passe beaucoup de temps sur les tatamis en MMA ou en trek dans le Mercantour. C'est un bon équilibre qui m'apprend à gérer la pression et à ne rien lâcher quand un problème bloque.</p>
+                <p>Pour ma deuxième année en septembre, je cherche une alternance en cybersécurité pour passer de la théorie à la pratique et protéger de vraies infrastructures.</p>
+                
+                <div style="margin-top: 25px;">
+                    <a href="#projets" class="btn-val">Découvrir mes projets</a>
+                </div>
+            </div>
+            <div class="about-visual">
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="competences">
+        <h2 class="section-title">Capacités Techniques</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>Réseaux</h3>
+                <p>Architecture TCP/IP, adressage IPv4, bases du routage, VLANs.</p>
+            </div>
+            <div class="card">
+                <h3>Informatique</h3>
+                <p>Initiation au scripting (Python, C) et services réseaux (Linux).</p>
+            </div>
+            <div class="card">
+                <h3>Télécoms & Langues</h3>
+                <p>Transmissions de signaux, numérisation. Anglais B2 (technique), Espagnol B1.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets">
+        <h2 class="section-title">Registre des Opérations (Projets)</h2>
+        <div class="grid-container">
+            <div class="card val-project">
+                
+                <span class="badge">Réseaux & Infrastructures</span>
+                <h3>Déploiement d'un Réseau d'Entreprise</h3>
+                <ul class="projet-details">
+                    <li><strong>Objectifs :</strong> Concevoir l'architecture réseau d'une PME multisite avec isolation des départements.</li>
+                    <li><strong>Mes actions :</strong> Configuration des switchs Cisco, paramétrage des VLANs et plan d'adressage IPv4.</li>
+                    <li><strong>Résultats :</strong> Infrastructure fonctionnelle avec communication inter-VLAN validée.</li>
+                    <li><strong>Ressenti :</strong> Résoudre les pannes de routage a été particulièrement stimulant.</li>
+                    <li><strong>Preuves :</strong> <a href="sae21.png" target="_blank" class="preuve-link">Schéma</a></li>
+                    
+                </ul>
+            </div>
+            
+            <div class="card val-project">
+                
+                <span class="badge">Dev & Scripting</span>
+                <h3>Automatisation de Surveillance</h3>
+                <ul class="projet-details">
+                    <li><strong>Objectifs :</strong> Créer un outil pour surveiller l'état des ports d'une machine distante.</li>
+                    <li><strong>Mes actions :</strong> Codage de scripts en Python (sockets) et automatisation sous Linux.</li>
+                    <li><strong>Résultats :</strong> Génération de logs automatiques sur l'état des connexions.</li>
+                    <li><strong>Ressenti :</strong> La logique algorithmique m'a plu, malgré la gestion complexe des exceptions réseau.</li>
+                    <li><strong>Preuves :</strong> <a href="code.png" target="_blank" class="preuve-link">Code</a></li>
+                    
+                </ul>
+            </div>
+
+            <div class="card val-project">
+               
+                <span class="badge">Logistique</span>
+                <h3>Expédition Mont Blanc</h3>
+                <ul class="projet-details">
+                    <li><strong>Objectifs :</strong> Planifier et survivre à une traversée en autonomie totale.</li>
+                    <li><strong>Mes actions :</strong> Tracé des itinéraires, sélection de l'équipement (ratio poids/utilité), navigation.</li>
+                    <li><strong>Résultats :</strong> Parcours achevé dans les délais sans incident majeur.</li>
+                    <li><strong>Ressenti :</strong> Un excellent test de résistance mentale et d'adaptation face à l'imprévu.</li>
+                    <li><strong>Preuves :</strong> <a href="mt.png" target="_blank" class="preuve-link">Mont Blanc</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="experiences">
+        <h2 class="section-title">Historique de Terrain (Expériences)</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>Équipier polyvalent // Burger King</h3>
+                <p class="date">Juillet - Septembre 2025</p>
+                <p>Gestion des flux en cuisine et comptoir avec respect strict des indicateurs de rapidité (timer). Relation client sous très forte affluence.</p>
+            </div>
+            <div class="card">
+                <h3>Barman & Serveur // Restaurant Gloria</h3>
+                <p class="date">Août - Septembre 2024</p>
+                <p>Prise en charge des clients et gestion du plan de salle en période de rush. Préparation et service avec rapidité et précision.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="interets">
+        <h2 class="section-title">Profil Psychologique (Intérêts)</h2>
+        <div class="split-layout">
+            <div class="card">
+                <h3>Sport & Dépassement de soi</h3>
+                <ul class="projet-details">
+                    <li><strong>MMA & JJB :</strong> Pratique forgeant la discipline et la gestion du stress.</li>
+                    <li><strong>Trekking :</strong> Organisation de sorties en autonomie (Mercantour).</li>
+                    <li><strong>Course à pied :</strong> Endurance et condition physique.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Culture & Autonomie</h3>
+                <ul class="projet-details">
+                    <li><strong>Guitare électrique :</strong> Pratique en autodidacte, rigueur.</li>
+                    <li><strong>Cinéma & Séries :</strong> Visionnage en VO (fantaisie, Tarantino) pour la compréhension technique.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Point de Ralliement</h2>
+        <div class="content-box text-center">
+            <p><strong>Base :</strong> 728 chemin des 4 chemins - Antibes 06600</p>
+            <p><strong>Comms :</strong> 07 68 71 60 34</p>
+            <p><strong>Réseau :</strong> chiel-nicolas.jacquemin@etu.univ-cotedazur.fr</p>
+            <div class="cta-container" style="justify-content: center; margin-top: 20px;">
+                <a href="mailto:chiel-nicolas.jacquemin@etu.univ-cotedazur.fr" class="btn-val">Initier le contact</a>
+                <a href="https://www.linkedin.com/in/chiel-jacquemin/" class="btn-val btn-sec" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

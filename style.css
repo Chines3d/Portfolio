@@ -1,0 +1,332 @@
+:root {
+    --val-dark: #0F1923;
+    --val-red: #FF4655;
+    --val-white: #ECE8E1;
+    --val-gray: #7E7E7E;
+    --font-titres: 'Oswald', sans-serif;
+    --font-texte: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--val-dark);
+    color: var(--val-white);
+    font-family: var(--font-texte);
+    line-height: 1.6;
+}
+
+/* Typographie */
+h1, h2, h3 {
+    font-family: var(--font-titres);
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+h1 span {
+    color: var(--val-red);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--val-red);
+    border-left: 8px solid var(--val-red);
+    padding-left: 15px;
+    margin-bottom: 40px;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(15, 25, 35, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    z-index: 1000;
+}
+
+.nav-logo {
+    font-family: var(--font-titres);
+    font-size: 1.5rem;
+    color: var(--val-red);
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: var(--val-white);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--val-red);
+}
+
+/* Layout */
+section {
+    padding: 100px 10%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Section Accueil avec superposition (overlay) pour lisibilité */
+.hero {
+    background-image: linear-gradient(rgba(15, 25, 35, 0.85), rgba(15, 25, 35, 0.85)), url('background-valorant-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero::after {
+    content: "RADIANT //";
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-family: var(--font-titres);
+    font-size: 5rem;
+    color: rgba(255, 255, 255, 0.03);
+    z-index: 0;
+}
+
+.split-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 50px;
+    align-items: center;
+    z-index: 1;
+}
+
+.tagline {
+    color: var(--val-red);
+    letter-spacing: 4px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px black;
+}
+
+.hero h1, .hero h2, .hero p {
+    text-shadow: 1px 1px 3px black;
+}
+
+/* Ajustement de la photo d'agent (moins large, format portrait) */
+.hero-visual {
+    max-width: 350px;
+    margin-left: auto;
+}
+
+.hero-visual .img-val {
+    aspect-ratio: 3/4;
+    object-fit: cover;
+}
+
+.content-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-left: 4px solid var(--val-gray);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Images tactiques Valorant */
+.img-val {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 2px solid var(--val-red);
+    clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
+    filter: grayscale(20%) contrast(110%);
+    transition: filter 0.4s ease;
+}
+
+.img-val:hover {
+    filter: grayscale(0%) contrast(100%);
+}
+
+.card-img {
+    width: calc(100% + 60px);
+    height: 180px;
+    object-fit: cover;
+    margin: -30px -30px 20px -30px;
+    border-bottom: 2px solid var(--val-red);
+    filter: grayscale(40%);
+    transition: 0.3s;
+}
+
+.card:hover .card-img {
+    filter: grayscale(0%);
+}
+
+/* Cartes */
+.card {
+    background: rgba(236, 232, 225, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--val-red);
+    background: rgba(255, 70, 85, 0.05);
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: var(--val-red);
+}
+
+.card h3 {
+    color: var(--val-white);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* Listes Projets */
+.projet-details {
+    list-style: none;
+    padding-left: 0;
+}
+
+.projet-details li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.projet-details strong {
+    color: var(--val-red);
+}
+
+.preuve-link {
+    display: inline-block;
+    margin-top: 5px;
+    color: var(--val-white);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 4px 8px;
+    text-decoration: none;
+    border: 1px solid var(--val-gray);
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.preuve-link:hover {
+    background-color: var(--val-red);
+    border-color: var(--val-red);
+}
+
+.date {
+    color: var(--val-red);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.badge {
+    background: var(--val-red);
+    color: #fff;
+    padding: 3px 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* Boutons */
+.cta-container {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+.btn-val {
+    background-color: var(--val-red);
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-family: var(--font-titres);
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    display: inline-block;
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-val:hover {
+    background-color: var(--val-white);
+    color: var(--val-dark);
+}
+
+.btn-sec {
+    background-color: transparent;
+    border: 2px solid var(--val-red);
+    color: var(--val-red);
+    text-shadow: 1px 1px 2px black;
+}
+
+.btn-sec:hover {
+    background-color: var(--val-red);
+    color: var(--val-white);
+    text-shadow: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .split-layout {
+        grid-template-columns: 1fr;
+    }
+    nav ul {
+        display: none;
+    }
+    .hero-visual {
+        margin: 0 auto;
+    }
+}
+.hero {
+    /* Remplace NOM_DE_TON_IMAGE.jpg par ton fichier */
+    background-image: linear-gradient(rgba(15, 25, 35, 0.85), rgba(15, 25, 35, 0.85)), url('fond.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
